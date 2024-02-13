@@ -30,6 +30,7 @@ return {
 					"lua_ls",
 					"vtsls",
 					"eslint",
+					"rust_analyzer",
 				},
 				handlers = {
 					function(server_name)
