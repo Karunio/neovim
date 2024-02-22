@@ -7,7 +7,27 @@ return {
 	config = function()
 		local config = require("nvim-treesitter.configs")
 		config.setup({
-			auto_install = true,
+			auto_install = false,
+			ensure_installed = {
+				"c",
+				"cpp",
+				"vim",
+				"vimdoc",
+				"lua",
+				"jsdoc",
+				"json",
+				"jsonc",
+				"typescript",
+				"javascript",
+				"yaml",
+				"gitignore",
+				"rust",
+				"dockerfile",
+				"terraform",
+				"toml",
+				"comment",
+				"regex",
+			},
 			highlight = {
 				enable = true,
 				additional_vim_regex_highlighting = false,
