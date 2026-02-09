@@ -6,6 +6,7 @@ return {
 	config = function()
 		require("catppuccin").setup({
 			flavour = "frappe",
+			auto_integrations = true,
 		})
 		vim.cmd.colorscheme("catppuccin")
 	end,
