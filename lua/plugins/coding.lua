@@ -7,14 +7,16 @@ return {
 		},
 	},
 	{
-		"lukas-reineke/indent-blankline.nvim",
-		main = "ibl",
-		opts = {},
-	},
-	{
 		"kylechui/nvim-surround",
 		branch = "main",
 		event = "VeryLazy",
+		opts = {},
+	},
+	{
+		"numToStr/Comment.nvim",
+		dependencies = {
+			"JoosepAlviste/nvim-ts-context-commentstring",
+		},
 		opts = {},
 	}
 }

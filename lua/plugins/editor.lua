@@ -72,4 +72,9 @@ return {
 			require("telescope").load_extension("ui-select")
 		end,
 	},
+	{
+		"folke/todo-comments.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		opts = {}
+	},
 }

@@ -4,6 +4,7 @@ return {
 		branch = "master",
 		build = ":TSUpdate",
 		main = "nvim-treesitter.configs",
+		event = { "BufReadPost", "BufNewFile" },
 		opts = {
 			auto_install = true,
 			highlight = {
