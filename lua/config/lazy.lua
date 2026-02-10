@@ -18,6 +18,9 @@ require("lazy").setup({
 		{ import = "plugins" },
 	},
 	install = { colorscheme = { "catppuccin-frappe" } },
+	defaults = {
+		lazy = false,
+	},
 	checker = { enabled = true },
 	performance = {
 		rtp = {

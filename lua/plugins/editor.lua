@@ -15,8 +15,6 @@ return {
 					enabled = true,
 					leave_dirs_open = true,
 				},
-
-				enable_diagnostics = true,
 			},
 		},
 		keys = {

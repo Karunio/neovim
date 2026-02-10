@@ -38,10 +38,16 @@ return {
 	},
 	{
 		"j-hui/fidget.nvim",
+		version = "*",
 		opts = {
 			notification = {
 				override_vim_notify = true,
 			}
 		}
+	},
+	{
+		"folke/todo-comments.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		opts = {}
 	}
 }
