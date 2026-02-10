@@ -1,20 +1,5 @@
 vim.g.mapleader = " "
 
-vim.opt.smarttab = true
-vim.opt.smartindent = true
-vim.opt.expandtab = false
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.relativenumber = true
-vim.opt.number = true
-vim.opt.cursorline = true
-vim.opt.title = true
-vim.opt.termguicolors = true
-
---forced english
-vim.cmd.language("en_US")
-
 -- Move Line Visual Block
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -49,10 +34,3 @@ vim.keymap.set("v", "<leader>p", '"+p')
 -- 	"<cmd>wincmd b<CR>|<cmd>bel split<CR>|<cmd>terminal<CR>|<cmd>resize 10<CR>",
 -- 	{ desc = "Terminal" }
 -- )
-
---vim.api.nvim_create_autocmd("LspAttach", {
---	callback = function(args)
---		local client = vim.lsp.get_client_by_id(args.data.client_id)
---		client.server_capabilities.semanticTokensProvider = nil
---	end,
---})
