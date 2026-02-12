@@ -61,4 +61,8 @@ return {
 		main = "ibl",
 		opts = {},
 	},
+	{
+		"luukvbaal/statuscol.nvim",
+		opts = {},
+	},
 }

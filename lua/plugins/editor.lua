@@ -28,11 +28,9 @@ return {
 			vim.o.timeout = true
 			vim.o.timeoutlen = 100
 		end,
-		opts = {},
 	},
 	{
 		"folke/todo-comments.nvim",
 		dependencies = { "nvim-lua/plenary.nvim" },
-		opts = {}
 	},
 }
