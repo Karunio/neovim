@@ -13,10 +13,9 @@ return {
 		opts = {},
 	},
 	{
-		"numToStr/Comment.nvim",
-		dependencies = {
-			"JoosepAlviste/nvim-ts-context-commentstring",
-		},
+		"folke/ts-comments.nvim",
+		event = "VeryLazy",
 		opts = {},
-	}
+		enabled = vim.fn.has("nvim-0.10.0") == 1,
+	},
 }
