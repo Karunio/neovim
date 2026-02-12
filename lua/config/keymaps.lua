@@ -21,11 +21,20 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
 -- No Search Highlight
-vim.keymap.set("n", "<leader>h", "<cmd>nohlsearch<CR>")
+vim.keymap.set("n", "<leader>h", function()
+	vim.cmd("nohlsearch")
+	vim.fn.setreg("/", "")
+end, { desc = "Clear Search Highlight" })
 
 -- yank to clipboard
-vim.keymap.set("v", "<leader>y", '"+y')
-vim.keymap.set("v", "<leader>p", '"+p')
+vim.keymap.set({ "n", "v" }, "<leader>y", '"+y', { desc = "Yank to clipboard" })
+vim.keymap.set({ "n", "v" }, "<leader>p", '"+p', { desc = "Paste from clipboard" })
+
+-- diagnostic
+vim.keymap.set("n", "<space>e", vim.diagnostic.open_float, { desc = "diagnostic open_float" })
+vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "diagnostic goto_prev" })
+vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "diagnostic goto_next" })
+vim.keymap.set("n", "<space>q", vim.diagnostic.setloclist, { desc = "diagnostic setloclist" })
 
 -- terminal split below
 -- vim.keymap.set(

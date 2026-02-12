@@ -1,3 +1,14 @@
+vim.diagnostic.config({
+	signs = {
+		text = {
+			[vim.diagnostic.severity.ERROR] = "󰅚 ",
+			[vim.diagnostic.severity.WARN] = "󰀪 ",
+			[vim.diagnostic.severity.INFO] = "󰋽 ",
+			[vim.diagnostic.severity.HINT] = "󰌶 ",
+		},
+	},
+})
+
 return {
 	{
 		"goolord/alpha-nvim",
@@ -42,8 +53,8 @@ return {
 		opts = {
 			notification = {
 				override_vim_notify = true,
-			}
-		}
+			},
+		},
 	},
 	{
 		"lukas-reineke/indent-blankline.nvim",
