@@ -17,12 +17,18 @@ return {
 				"css",
 				"javascript",
 				"typescript",
+				"jsx",
 				"tsx",
 				"java",
 				"python",
 				"bash",
 				"diff",
 				"json",
+				"dockerfile",
+				"xml",
+				"yaml",
+				"toml",
+				"ssh_config",
 			}
 
 			require("nvim-treesitter").install(parsers)

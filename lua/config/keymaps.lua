@@ -30,12 +30,6 @@ end, { desc = "Clear Search Highlight" })
 vim.keymap.set({ "n", "v" }, "<leader>y", '"+y', { desc = "Yank to clipboard" })
 vim.keymap.set({ "n", "v" }, "<leader>p", '"+p', { desc = "Paste from clipboard" })
 
--- diagnostic
-vim.keymap.set("n", "<space>e", vim.diagnostic.open_float, { desc = "diagnostic open_float" })
-vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "diagnostic goto_prev" })
-vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "diagnostic goto_next" })
-vim.keymap.set("n", "<space>q", vim.diagnostic.setloclist, { desc = "diagnostic setloclist" })
-
 -- terminal split below
 -- vim.keymap.set(
 -- 	"n",
