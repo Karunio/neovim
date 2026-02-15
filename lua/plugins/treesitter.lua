@@ -33,18 +33,24 @@ return {
 
 			require("nvim-treesitter").install(parsers)
 
+			local patterns = {}
+			for _, parser in ipairs(parsers) do
+				local parser_patterns = vim.treesitter.language.get_filetypes(parser)
+				for _, pp in pairs(parser_patterns) do
+					table.insert(patterns, pp)
+				end
+			end
+
+			vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
+			vim.wo[0][0].foldmethod = "expr"
+
+			vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+
 			vim.api.nvim_create_autocmd("FileType", {
 				group = vim.api.nvim_create_augroup("nvim-treesitter-highlight", { clear = true }),
+				pattern = patterns,
 				callback = function()
-					local ok, _ = pcall(vim.treesitter.start)
-					if not ok then
-						return
-					end
-
-					vim.opt_local.foldmethod = "expr"
-					vim.opt_local.foldexpr = "v:lua.vim.treesitter.foldexpr()"
-
-					vim.opt_local.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+					vim.treesitter.start()
 				end,
 			})
 		end,

@@ -1,5 +1,10 @@
 return {
 	{
+		"folke/lazydev.nvim",
+		ft = "lua",
+		opts = {},
+	},
+	{
 		"mason-org/mason-lspconfig.nvim",
 		opts = {},
 		dependencies = {

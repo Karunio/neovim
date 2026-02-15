@@ -11,7 +11,6 @@ return {
 			typescriptreact = { "eslint_d" },
 		},
 	},
-
 	config = function(_, opts)
 		local lint = require("lint")
 
