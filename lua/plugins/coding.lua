@@ -1,19 +1,24 @@
 return {
 	{
-		"windwp/nvim-autopairs",
-		event = "InsertEnter",
+		"nvim-mini/mini.pairs",
+		event = "VeryLazy",
 		opts = {
-			check_ts = true,
+			modes = { insert = true, command = true, terminal = false },
+			skip_next = [=[[%w%%%'%[%"%.%`%$]]=],
+			skip_ts = { "string" },
+			skip_unbalanced = true,
+			markdown = true,
 		},
 	},
 	{
-		"kylechui/nvim-surround",
-		branch = "main",
-		event = "VeryLazy",
+		"nvim-mini/mini.surround",
 		opts = {},
 	},
 	{
 		"folke/ts-comments.nvim",
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+		},
 		event = "VeryLazy",
 		opts = {},
 		enabled = vim.fn.has("nvim-0.10.0") == 1,

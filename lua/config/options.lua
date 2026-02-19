@@ -17,5 +17,8 @@ vim.opt.foldlevel = 99
 vim.opt.foldlevelstart = 99
 vim.opt.foldenable = true
 
+vim.opt.timeout = true
+vim.opt.timeoutlen = 100
+
 --forced english
 vim.cmd.language("en_US")

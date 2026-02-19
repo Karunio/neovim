@@ -3,12 +3,11 @@ return {
 	opts = {
 		events = { "BufWritePost", "BufReadPost", "InsertLeave" },
 
-		-- 파일타입별 린터 목록
 		linters_by_ft = {
-			javascript = { "eslint_d" },
-			typescript = { "eslint_d" },
-			javascriptreact = { "eslint_d" },
-			typescriptreact = { "eslint_d" },
+			-- javascript = { "eslint_d" },
+			-- typescript = { "eslint_d" },
+			-- javascriptreact = { "eslint_d" },
+			-- typescriptreact = { "eslint_d" },
 		},
 	},
 	config = function(_, opts)
